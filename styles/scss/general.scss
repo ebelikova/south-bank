@@ -1,5 +1,313 @@
-@import './variables.scss';
+@import "./variables.scss";
 
-.test { 
-    color: $red;
+body {
+  color: $main;
+  font-family: "Segoe UI";
+}
+
+.reset-button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+.input-reset {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  padding: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.primary-button {
+  border-radius: 8px;
+  background-color: $primary;
+  color: white;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 32px;
+  min-width: 220px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+.secondary-button {
+  border: 1px solid $primary;
+  color: $primary;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 11px 32px;
+  border-radius: 8px;
+  min-width: 220px;
+  display: none;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid $primary-hover;
+    background-color: $primary-hover;
+    color: white;
+  }
+
+  @media screen and (min-width: 528px) {
+    display: inline-block;
+  }
+}
+
+.header {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px;
+  color: white;
+  padding-bottom: 12px;
+
+  @media screen and (min-width: 528px) {
+    line-height: 64px;
+  }
+}
+
+.mint-button {
+  color: $secondary;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 20px 18px;
+  width: 100%;
+  text-align: start;
+  cursor: pointer;
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.top-menu {
+  &__container {
+    padding: 18px 18px;
+    margin: 0 auto;
+    max-width: 1296px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger {
+    display: block;
+    margin-right: 20px;
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__item {
+    line-height: 24px;
+    font-weight: 500;
+    margin-left: 70px;
+    font-size: 14px;
+    cursor: pointer;
+    display: none;
+
+    &:last-of-type {
+      margin-left: 0;
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__icon {
+    padding-right: 20px;
+  }
+}
+
+.map-block {
+  background-color: #f2f7fb;
+
+  &__city {
+    display: flex;
+    align-items: center;
+  }
+
+  &__arrow {
+    margin-left: 6px;
+    margin-right: 36px;
+    cursor: pointer;
+  }
+
+  &__city-select {
+    color: $link-blue;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+  }
+
+  &__container {
+    padding: 38px 18px 58px;
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    margin-top: 24px;
+  }
+
+  &__image {
+    background-image: url(../../assets/Image/map.jpg);
+    max-height: 969px;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__text-bold {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  &__subtext {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__card {
+    line-height: 24px;
+    margin-bottom: 16px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+}
+
+.bottom-menu {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 24px 28px 36px;
+
+  @media screen and (min-width: 768px) {
+    padding: 56px 18px 64px;
+  }
+
+  &__contacts-option {
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+
+    &--hidden-tablet {
+      display: none;
+
+      @media screen and (min-width: 1200px) {
+        display: block;
+      }
+    }
+  }
+
+  &__contact-block {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 390px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__name-block {
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__option-block {
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  &__option-block--gray {
+    font-size: 14px;
+    line-height: 24px;
+    color: #acadb1;
+  }
+
+  &__name-option {
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+
+  &__icons {
+    display: flex;
+    margin-top: 24px;
+
+    @media screen and (min-width: 390px) {
+      margin-top: 0;
+    }
+  }
+
+  &__icon {
+    margin-top: 0;
+    margin-right: 24px;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 24px;
+    }
+  }
+
+  &__option {
+    font-size: 16px;
+    line-height: 40px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+
+    &--gray {
+      font-size: 14px;
+      line-height: 24px;
+      color: #acadb1;
+    }
+  }
 }

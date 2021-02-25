@@ -1,0 +1,253 @@
+.top-block {
+  &__bg-image {
+    background-image: url(../../assets/Image/mainLandscape.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &__container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 104px 28px 200px;
+
+    @media screen and (min-width: 576px) {
+      padding: 160px 28px 280px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 210px 18px 384px;
+    }
+  }
+
+  &__sub-header {
+    color: #d6d6d6;
+    font-size: 16px;
+    padding-bottom: 24px;
+    line-height: 24px;
+    max-width: 460px;
+  }
+
+  &__primary-button {
+    margin-right: 10px;
+  }
+
+  &__secondary-button {
+    @media screen and (min-width: 528px) {
+      display: inline-block;
+    }
+  }
+}
+
+.personal-area {
+  display: flex;
+  margin-left: auto;
+}
+
+.info-section {
+  background-color: #f2f7fb;
+
+  &__container {
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 56px 18px 64px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+    }
+  }
+}
+
+.info-block {
+  border: 1px solid #e5e5e5;
+  background-color: white;
+  margin-right: 0;
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  @media screen and (min-width: 1024px) {
+    margin-right: 16px;
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 8px rgba(43, 44, 54, 0.15),
+      0px 12px 16px rgba(43, 44, 54, 0.25);
+  }
+
+  &:hover .mint-button {
+    background-color: #14988b;
+    color: white;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &__text {
+    padding: 24px 20px 18px;
+  }
+
+  &__sub-header {
+    line-height: 40px;
+    font-size: 16px;
+
+    @media screen and (min-width: 1024px) {
+      font-style: 18px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &__header {
+    font-size: 32px;
+    line-height: 64px;
+    font-weight: 500;
+
+    @media screen and (min-width: 1024px) {
+      font-style: 18px;
+      padding-bottom: 18px;
+    }
+  }
+
+  &__subtext {
+    font-size: 16px;
+    line-height: 24px;
+    color: #90a4af;
+    padding-bottom: 38px;
+    display: none;
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
+}
+
+.news-section {
+  padding: 38px 18px 58px;
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.header-mini {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.articles-block {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.value {
+  display: flex;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.two-news {
+  display: block;
+}
+
+.value-block {
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  &:last-of-type {
+    margin-left: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 0;
+    }
+  }
+
+  &__header {
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+
+  &__sub-header {
+    color: #acadb1;
+    font-size: 14px;
+    line-height: 40px;
+  }
+
+  &__blue-button {
+    font-size: 14px;
+    color: #15499f;
+    font-weight: 500;
+    line-height: 40px;
+    margin-top: 12px;
+  }
+}
+
+.value-text {
+  display: flex;
+  margin-top: 12px;
+
+  &__name {
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 16px;
+
+    @media screen and (min-width: 576px) {
+      margin-right: 36px;
+    }
+  }
+
+  &__currency {
+    line-height: 24px;
+    font-size: 14px;
+    margin-right: 8px;
+
+    @media screen and (min-width: 576px) {
+      margin-right: 24px;
+    }
+
+    &:last-of-type {
+      margin-right: 4px;
+    }
+  }
+}
+
+.new-article {
+  display: flex;
+  margin-bottom: 16px;
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 8px;
+  }
+
+  &__text {
+    line-height: 24px;
+    font-size: 14px;
+    width: 200px;
+
+    &--gray {
+      line-height: 24px;
+      color: #90a4af;
+      font-size: 14px;
+    }
+  }
+}
+
+.selector-arrow {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
+}
